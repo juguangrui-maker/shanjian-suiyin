@@ -1,0 +1,53 @@
+#touch-action {display: none}
+
+@media (max-width: 767px) {
+  .topbar {left: 12px;right: 12px;top: max(12px, env(safe-area-inset-top));z-index: 8}
+  .logo b {font-size: 17px}
+  .toptools {gap: 3px}
+  .toptools button {min-height: 42px;min-width: 36px;padding: 6px 7px}
+  #overlook-btn {min-width: 64px;font-size: 10px}
+  #map-btn span,#sound-btn span {display: inline;font-size: 10px;margin-left: 2px}
+  #map-btn,#sound-btn {white-space: nowrap}
+  .music-status {top: calc(66px + env(safe-area-inset-top));right: 12px;max-width: min(180px, calc(100vw - 160px));min-height: 40px;border-radius: 4px;z-index: 7}
+  .music-status span {overflow: hidden;text-overflow: ellipsis;white-space: nowrap}
+  .quest {top: calc(118px + env(safe-area-inset-top))}
+  .passport-pill {top: calc(117px + env(safe-area-inset-top))}
+  .retreat-route {top: calc(171px + env(safe-area-inset-top))}
+
+  #joystick,.walking #joystick {
+    display: block;z-index: 9;left: 14px;bottom: calc(122px + env(safe-area-inset-bottom));
+    width: 108px;height: 108px;border: 1px solid #eee1b7aa;
+    background: #153b36b8;box-shadow: 0 4px 20px #0c29294d;
+    touch-action: none;user-select: none;
+  }
+  #joystick::after {content: '移动';position: absolute;left: 50%;top: -25px;transform: translateX(-50%);font-size: 11px;color: #f2ead1;text-shadow: 0 1px 5px #102e2b}
+  #stick {width: 44px;height: 44px;left: 31px;top: 31px;background: #eee1b7c9;border-color: #fff5d6}
+  #touch-action {
+    display: block;position: absolute;z-index: 9;right: 14px;
+    bottom: calc(133px + env(safe-area-inset-bottom));width: min(174px, 43vw);
+    min-height: 54px;padding: 10px 12px;border: 1px solid #e8d4a8;
+    background: #d9c18f;color: #173a35;border-radius: 4px;
+    font-size: 13px;line-height: 1.35;text-align: center;box-shadow: 0 5px 18px #0d292b66;
+  }
+  .interact {display: none!important}
+  .dialogue {bottom: calc(255px + env(safe-area-inset-bottom));max-width: calc(100% - 28px)}
+  .retreat-nav,.bottom-tools {bottom: calc(12px + env(safe-area-inset-bottom))}
+  .retreat-nav button,.bottom-tools button {min-height: 44px}
+  .small-ritual button {min-height: 44px}
+  .ritual-bottom {bottom: calc(18px + env(safe-area-inset-bottom));width: calc(100% - 28px)}
+  .ritual-controls {display: grid;grid-template-columns: repeat(3, 1fr);gap: 6px}
+  .ritual-controls span {grid-column: 1/-1;margin: 0;text-align: center}
+  .ritual-controls button {min-height: 44px;padding: 8px 5px;border: 1px solid #bfd3cc77;background: #173a3ac9;border-radius: 3px}
+  #festival-hud {bottom: calc(12px + env(safe-area-inset-bottom))}
+  #festival-hud button {min-height: 44px}
+  .overview-mode #touch-action,.playing #touch-action,.festival-mode #touch-action,
+  .festival-mode #joystick {display: none!important}
+}
+
+@media (max-width: 900px) and (max-height: 600px) {
+  #joystick,.walking #joystick {display: block;z-index: 9;left: 14px;bottom: calc(74px + env(safe-area-inset-bottom));width: 84px;height: 84px;touch-action: none;background: #153b36b8}
+  #stick {width: 36px;height: 36px;left: 23px;top: 23px}
+  #touch-action {display: block;position: absolute;z-index: 9;right: 14px;bottom: calc(91px + env(safe-area-inset-bottom));min-height: 44px;max-width: 180px;padding: 8px 12px;background: #d9c18f;color: #173a35;border: 1px solid #e8d4a8;border-radius: 4px}
+  .dialogue {bottom: calc(145px + env(safe-area-inset-bottom))}
+  .interact,.playing #joystick,.playing #touch-action,.festival-mode #joystick,.festival-mode #touch-action,.overview-mode #joystick,.overview-mode #touch-action {display: none!important}
+}
