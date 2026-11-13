@@ -1,0 +1,135 @@
+.overlook-hud {
+  display: block;
+  width: min(760px, calc(100% - 34px));
+  padding: 10px;
+  white-space: normal;
+}
+.overlook-hud .zone-overview-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.zone-overview-head > span {
+  color: #e8dfc9;
+  font: 14px var(--serif);
+}
+.zone-overview-head > div {display: flex;gap: 6px}
+.zone-shortcuts {
+  display: grid!important;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px!important;
+}
+.zone-shortcuts button,
+.zone-shortcuts button + button {
+  display: block;
+  min-width: 0;
+  min-height: 58px;
+  background: #233939;
+  border: 1px solid #bba87588;
+  color: #f0e7d2;
+  text-align: left;
+  padding: 7px 9px;
+}
+.zone-shortcuts button:hover,
+.zone-shortcuts button:focus-visible {
+  background: #405550;
+  border-color: #ead29a;
+}
+.zone-shortcuts button b,
+.zone-shortcuts button small {display: block}
+.zone-shortcuts button b {font: 15px var(--serif)}
+.zone-shortcuts button small {
+  color: #c7c9b6;
+  font-size: 9px;
+  margin-top: 2px;
+  line-height: 1.3;
+}
+.zone-shortcuts button i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--zone-color);
+  margin-right: 5px;
+}
+.atlas-zone-nav {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 7px;
+  margin: 14px 0 20px;
+}
+.atlas-zone-nav button {
+  min-width: 0;
+  text-align: left;
+  background: #e7ebe3;
+  border-top: 3px solid var(--zone-color);
+  color: #2e4e45;
+  padding: 10px;
+}
+.atlas-zone-nav b,
+.atlas-zone-nav small {display: block}
+.atlas-zone-nav b {font: 16px var(--serif)}
+.atlas-zone-nav small {font-size: 9px;margin-top: 4px;line-height: 1.45}
+.zone-section {margin: 23px 0 25px}
+.zone-section h3 {
+  font: 21px var(--serif);
+  color: #294d43;
+  border-bottom: 1px solid #b9c9bb;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+.zone-section h3 span {
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: var(--zone-color);
+  margin-right: 8px;
+  vertical-align: -2px;
+}
+.zone-section h3 small {
+  font: 10px var(--sans);
+  color: #6d877b;
+  margin-left: 10px;
+}
+.zone-section .destination-grid article {border-left: 3px solid var(--zone-color)}
+.zone-section .destination-grid article {min-height: 125px}
+.zone-section .destination-grid article p {line-height: 1.6}
+.pin-temple {left: 44%;top: 28%;background: #ece5d3}
+.pin-market {left: 13%;top: 72%;background: #ece2ce}
+.temple-panel {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 18px;
+  padding: 17px;
+  background: #e6e9e1;
+  border-left: 4px solid #a98b58;
+  align-items: center;
+}
+.temple-panel > span {
+  display: grid;
+  place-items: center;
+  height: 110px;
+  background: #293c3b;
+  color: #eadbb8;
+  font: 27px var(--serif);
+}
+.temple-panel h3 {font-size: 22px;color: #2c4b43}
+.temple-panel p {font-size: 11px;color: #687c73;line-height: 1.8;margin-top: 5px}
+@media(max-width: 600px) {
+  .overlook-hud {width: calc(100% - 16px);bottom: 8px;padding: 7px}
+  .overlook-hud .zone-overview-head {margin-bottom: 5px}
+  .zone-overview-head > span {font-size: 11px}
+  .zone-overview-head button {font-size: 9px}
+  .zone-shortcuts {grid-template-columns: repeat(2, minmax(0, 1fr));gap: 4px!important}
+  .zone-shortcuts button,.zone-shortcuts button + button {
+    min-height: 43px;padding: 4px 6px
+  }
+  .zone-shortcuts button b {font-size: 12px}
+  .zone-shortcuts button small {font-size: 7px}
+  .atlas-zone-nav {grid-template-columns: repeat(2, minmax(0, 1fr))}
+  .temple-panel {grid-template-columns: 1fr}
+  .temple-panel > span {height: 80px}
+}
